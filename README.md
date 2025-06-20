@@ -1,6 +1,6 @@
-## Hotel WebApp
+## HotelWebApp
 
-A web application skeleton for a hotel
+A web application for a hotel, designed with scalability in mind.
 
 ## Technology Stack:
 
