@@ -20,6 +20,7 @@ interface WelcomeMessages {
 export class AppComponent implements OnInit{
   messages: WelcomeMessages | null = null;
   convertedTimes: string = "";
+  showRooms: boolean = false;
 
   constructor(private httpClient:HttpClient){}
 
@@ -81,7 +82,6 @@ export class AppComponent implements OnInit{
 
     onSubmit({value,valid}:{value:Roomsearch,valid:boolean}){
       this.getAll().subscribe(
-
         rooms => {
           console.log(Object.values(rooms)[0]);
           this.rooms=<Room[]>Object.values(rooms)[0];
@@ -95,7 +95,7 @@ export class AppComponent implements OnInit{
               priceCAD: (priceInt * 1.3)
             };
           }));
-
+          this.showRooms = true;
         }
 
 
@@ -187,4 +187,3 @@ var ROOMS: Room[]=[
   "links" : ""
 }
 ] */
-
