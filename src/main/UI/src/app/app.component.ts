@@ -67,7 +67,7 @@ export class AppComponent implements OnInit{
   }
 
   getWelcomeMessages() {
-      console.log("Making Welcome message API Calls");
+      console.log("Welcome Message API Calls Sent");
 
     this.httpClient.get<WelcomeMessages>('/api/messages').subscribe({
       next: (data) => {
